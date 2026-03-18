@@ -1,0 +1,10 @@
+test_duplicate_differences (__main__.TestJollyJumpers) ... ok
+test_jolly_sequence (__main__.TestJollyJumpers) ... ok
+test_missing_differences (__main__.TestJollyJumpers) ... ok
+test_not_jolly_sequence (__main__.TestJollyJumpers) ... ok
+test_single_element (__main__.TestJollyJumpers) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

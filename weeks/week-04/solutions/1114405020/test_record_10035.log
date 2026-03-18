@@ -1,0 +1,10 @@
+test_cascading_carry (__main__.TestPrimaryArithmetic) ... ok
+test_different_length_numbers (__main__.TestPrimaryArithmetic) ... ok
+test_multiple_carries (__main__.TestPrimaryArithmetic) ... ok
+test_no_carry (__main__.TestPrimaryArithmetic) ... ok
+test_single_carry (__main__.TestPrimaryArithmetic) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

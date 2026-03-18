@@ -1,0 +1,9 @@
+test_basic_difference (__main__.TestHashmat) ... ok
+test_large_numbers (__main__.TestHashmat) ... ok
+test_reverse_difference (__main__.TestHashmat) ... ok
+test_zero_difference (__main__.TestHashmat) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

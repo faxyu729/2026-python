@@ -1,0 +1,9 @@
+test_basic_counting (__main__.TestCryptanalysis) ... ok
+test_empty_or_no_alpha (__main__.TestCryptanalysis) ... ok
+test_filter_non_alpha (__main__.TestCryptanalysis) ... ok
+test_sorting_by_count (__main__.TestCryptanalysis) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
