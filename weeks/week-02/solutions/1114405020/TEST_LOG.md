@@ -1,25 +1,25 @@
-# TEST_LOG.md
+# 測試日誌 (TEST_LOG.md)
 
-## Red Phase (Initial Test Run - Failing)
-**Execution Command:**  
+## Red 階段 (初始測試執行 - 失敗)
+**執行指令 (Execution Command):**  
 `python -m unittest discover -s tests -p "test_*.py" -v`
 
-**Results:**  
-- Total tests: 9  
-- Passed: 0  
-- Failed: 9  
+**結果 (Results):**  
+- 總測試數 (Total tests): 9  
+- 通過 (Passed): 0  
+- 失敗 (Failed): 9  
 
-**Key Changes Made:**  
-Implemented the core functions for all three tasks: `sequence_clean`, `student_ranking`, and `log_summary` with basic logic to handle input parsing and required computations.
+**進行的關鍵修改 (Key Changes Made):**  
+實作了所有三個任務的核心函式：`sequence_clean`、`student_ranking` 以及 `log_summary`，並加入基礎的邏輯以處理輸入資料的解析及所需的運算。
 
-## Green Phase (After Implementation - Passing)
-**Execution Command:**  
+## Green 階段 (實作後 - 測試通過)
+**執行指令 (Execution Command):**  
 `python -m unittest discover -s tests -p "test_*.py" -v`
 
-**Results:**  
-- Total tests: 9  
-- Passed: 9  
-- Failed: 0  
+**結果 (Results):**  
+- 總測試數 (Total tests): 9  
+- 通過 (Passed): 9  
+- 失敗 (Failed): 0  
 
-**Key Changes Made:**  
-Refined the implementations to correctly handle edge cases like empty inputs and tie-breaking in sorting, ensuring all test assertions pass.
+**進行的關鍵修改 (Key Changes Made):**  
+優化了實作細節，確保能夠正確處理邊界情況（例如空字串輸入），以及排序中同分時的進階處理，讓所有的測試斷言 (assertions) 都能順利通過。

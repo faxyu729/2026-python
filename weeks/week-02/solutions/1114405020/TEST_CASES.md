@@ -1,6 +1,6 @@
-# TEST_CASES.md
+# 測試案例文件 (TEST_CASES.md)
 
-## Test Case 1: Normal Input for Task 1
+## Test Case 1: Task 1 正常輸入情況 (Normal Input for Task 1)
 **Input:**  
 "5 3 5 2 9 2 8 3 1"
 
@@ -18,11 +18,11 @@ evens: 2 2 8
 
 **Pass/Fail:** PASS  
 
-**Corresponding Test Function:** tests/test_task1.py::TestSequenceClean::test_normal_case  
+**對應的測試函式 (Corresponding Test Function):** `tests/test_task1.py::TestSequenceClean::test_normal_case`  
 
-**Key Fix Point:** Implemented deduplication without using set directly, preserving order.
+**修復重點 (Key Fix Point):** 在不直接將結果轉為 set 的情況下實作了去重功能，成功保留了原本的順序。
 
-## Test Case 2: Edge Case for Task 1 (Empty Input)
+## Test Case 2: Task 1 邊界情況 - 空輸入 (Edge Case for Task 1: Empty Input)
 **Input:**  
 ""
 
@@ -40,11 +40,11 @@ evens: ""
 
 **Pass/Fail:** PASS  
 
-**Corresponding Test Function:** tests/test_task1.py::TestSequenceClean::test_empty_input  
+**對應的測試函式 (Corresponding Test Function):** `tests/test_task1.py::TestSequenceClean::test_empty_input`  
 
-**Key Fix Point:** Added check for empty input to return empty strings.
+**修復重點 (Key Fix Point):** 新增了空字串的檢查，確保輸入為空時回傳空字串。
 
-## Test Case 3: Anti-Case for Task 1 (No Evens)
+## Test Case 3: Task 1 反向情況 - 無偶數 (Anti-Case for Task 1: No Evens)
 **Input:**  
 "1 3 5 7 9"
 
@@ -62,11 +62,11 @@ evens: ""
 
 **Pass/Fail:** PASS  
 
-**Corresponding Test Function:** tests/test_task1.py::TestSequenceClean::test_no_evens  
+**對應的測試函式 (Corresponding Test Function):** `tests/test_task1.py::TestSequenceClean::test_no_evens`  
 
-**Key Fix Point:** Correctly filtered even numbers, returning empty for no evens.
+**修復重點 (Key Fix Point):** 正確過濾偶數；如果沒有偶數則回傳空字串。
 
-## Test Case 4: Normal Input for Task 2
+## Test Case 4: Task 2 正常輸入情況 (Normal Input for Task 2)
 **Input:**  
 6 3  
 amy 88 20  
@@ -88,11 +88,11 @@ bob 88 19
 
 **Pass/Fail:** PASS  
 
-**Corresponding Test Function:** tests/test_task2.py::TestStudentRanking::test_normal_case  
+**對應的測試函式 (Corresponding Test Function):** `tests/test_task2.py::TestStudentRanking::test_normal_case`  
 
-**Key Fix Point:** Used sorted with correct key for multi-level sorting.
+**修復重點 (Key Fix Point):** 正確使用 `sorted()` 函式搭配 `key` 參數進行多條件排序。
 
-## Test Case 5: Tie-Breaking for Task 2
+## Test Case 5: Task 2 同分情況處理 (Tie-Breaking for Task 2)
 **Input:**  
 4 4  
 bob 88 19  
@@ -114,6 +114,6 @@ zoe 88 21
 
 **Pass/Fail:** PASS  
 
-**Corresponding Test Function:** tests/test_task2.py::TestStudentRanking::test_tie_breaking  
+**對應的測試函式 (Corresponding Test Function):** `tests/test_task2.py::TestStudentRanking::test_tie_breaking`  
 
-**Key Fix Point:** Ensured sorting handles ties by age and name correctly.
+**修復重點 (Key Fix Point):** 確保排序邏輯在處理同分數、同年齡的學生時，能正確依姓名進行排序。
