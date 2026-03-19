@@ -1,0 +1,19 @@
+test_caching_works (tests.test_question100.TestQuestion100.test_caching_works)
+測試：快取功能 ... ok
+test_cycle_length_1 (tests.test_question100.TestQuestion100.test_cycle_length_1)
+測試：n=1時Cycle-length為1 ... ok
+test_cycle_length_10 (tests.test_question100.TestQuestion100.test_cycle_length_10)
+測試：n=10 ... ok
+test_cycle_length_2 (tests.test_question100.TestQuestion100.test_cycle_length_2)
+測試：n=2 ... ok
+test_cycle_length_3 (tests.test_question100.TestQuestion100.test_cycle_length_3)
+測試：n=3 ... ok
+test_range_100_to_200 (tests.test_question100.TestQuestion100.test_range_100_to_200)
+測試：範圍[100,200] ... ok
+test_range_1_to_10 (tests.test_question100.TestQuestion100.test_range_1_to_10)
+測試：範圍[1,10]的最大Cycle-length ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK
