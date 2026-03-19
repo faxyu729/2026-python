@@ -1,0 +1,3 @@
+"To be or not to be," quoth the bard, "that is the question."
+He said "Hello" and "Goodbye".
+The answer is "42".
