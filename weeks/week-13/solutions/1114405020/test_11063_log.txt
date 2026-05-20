@@ -1,0 +1,11 @@
+﻿python : ......
+位於 線路:1 字元:1
++ python test_11063.py 2>&1 | Out-File -FilePath "test_11063_log.txt" - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (......:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK
