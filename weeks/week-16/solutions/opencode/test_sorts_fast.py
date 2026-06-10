@@ -12,9 +12,9 @@
 
 import unittest
 
-# from sorts_fast import bubble_sort_fast, quick_sort_fast  # 完成 sorts_fast.py 後解除註解
+from sorts_fast import bubble_sort_fast, quick_sort_fast
 
-FAST_FUNCTIONS = []  # 解除上面 import 後填入
+FAST_FUNCTIONS = [bubble_sort_fast, quick_sort_fast]
 
 
 class TestFastSortFunctions(unittest.TestCase):
@@ -22,9 +22,6 @@ class TestFastSortFunctions(unittest.TestCase):
 
     def test_basic_cases(self):
         """已排序、未排序、空 list、單一元素"""
-        if not FAST_FUNCTIONS:
-            self.fail("尚未匯入加速版排序函式 — 先解除 import 註解")
-
         test_cases = [
             ([], []),
             ([1], [1]),
@@ -41,9 +38,6 @@ class TestFastSortFunctions(unittest.TestCase):
 
     def test_random_data_matches_builtin(self):
         """亂數資料排序結果與 sorted() 一致"""
-        if not FAST_FUNCTIONS:
-            self.fail("尚未匯入加速版排序函式 — 先解除 import 註解")
-
         import random
         random.seed(42)
         data = [random.randint(-1000, 1000) for _ in range(100)]
@@ -55,9 +49,6 @@ class TestFastSortFunctions(unittest.TestCase):
 
     def test_input_not_mutated(self):
         """原始輸入 list 不可被排序函式修改"""
-        if not FAST_FUNCTIONS:
-            self.fail("尚未匯入加速版排序函式 — 先解除 import 註解")
-
         original = [3, 1, 4, 1, 5]
         for sort_func in FAST_FUNCTIONS:
             with self.subTest(sort_func=sort_func.__name__):
@@ -69,9 +60,6 @@ class TestFastSortFunctions(unittest.TestCase):
 
     def test_all_identical_values(self):
         """EDGE: 所有元素相同"""
-        if not FAST_FUNCTIONS:
-            self.fail("尚未匯入加速版排序函式 — 先解除 import 註解")
-
         data = [7] * 20
         for sort_func in FAST_FUNCTIONS:
             with self.subTest(sort_func=sort_func.__name__):
@@ -80,9 +68,6 @@ class TestFastSortFunctions(unittest.TestCase):
 
     def test_large_random_data(self):
         """EDGE: 大量亂數(1000 筆)"""
-        if not FAST_FUNCTIONS:
-            self.fail("尚未匯入加速版排序函式 — 先解除 import 註解")
-
         import random
         random.seed(99)
         data = [random.randint(-5000, 5000) for _ in range(1000)]

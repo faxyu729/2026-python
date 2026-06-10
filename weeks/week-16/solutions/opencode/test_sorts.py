@@ -11,10 +11,12 @@
 import unittest
 
 from sorts import bubble_sort, quick_sort, merge_sort
+from sorts_fast import bubble_sort_fast, quick_sort_fast
 
 # 三個排序函式都放進這個 list,每個測試用 subTest 跑一輪;
 # Stage 3 的加速版 append 進來就能吃到同一組測試。
-SORT_FUNCTIONS = [bubble_sort, quick_sort, merge_sort]
+SORT_FUNCTIONS = [bubble_sort, quick_sort, merge_sort,
+                 bubble_sort_fast, quick_sort_fast]
 
 
 class TestSortFunctions(unittest.TestCase):
