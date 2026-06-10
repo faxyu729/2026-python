@@ -37,10 +37,7 @@
   - `f.records` — 歷次耗時的 list(累積)
 - 裝飾器內**不准 `print`**——輸出格式化是 benchmark 的事,計時器保持安靜才能被重複利用
 
-> 設計提示:`last_elapsed` 和 `records` 掛在 wrapper 函式物件上。
-> 想想看:為什麼掛在 wrapper 上而不是用全域變數?(這題會出現在課末檢測)
-
-**必備 test case(≥3)**:回傳值不變、`__name__` 保留、呼叫後 `last_elapsed > 0` 且 `records` 長度遞增。
+**必備 test case(≥3)**:規格的每一條都要有測試覆蓋。AI 給的測試齊不齊,自己驗收。
 
 ## Stage 2｜三種排序 + 量測(課堂 0:25–1:10)
 
@@ -55,8 +52,8 @@ def merge_sort(data: list) -> list: ...
 - 一律**回傳新的 list,不可修改傳入的 list**(測試會驗)
 - **禁用** `sorted()` / `list.sort()`——那是 Stage 3 的對照組
 
-**必備 test case(每個函式都要過)**:空 list、單元素、含重複值、反向排序、隨機資料與 `sorted()` 結果比對、原 list 未被修改。
-三個函式共用同一組測試——用迴圈 + `subTest`,不要複製貼上三份。
+**必備 test case(每個函式都要過)**:一般案例之外,edge case 自己想(空的?重複?已排好?),
+「不可修改傳入 list」也要有測試。三個函式共用同一組測試——用迴圈 + `subTest`,不要複製貼上三份。
 
 接著寫 `benchmark.py`:
 
@@ -91,7 +88,7 @@ def plot_results(results: dict, out_path: str) -> None: ...
 
 - 折線圖:x 軸 = 資料量 n,y 軸 = 平均秒數(**y 軸用 log scale**,不然 O(n²) 會把其他線壓扁)
 - 每個演算法一條線(含 baseline 與加速版),輸出 `assets/benchmark.png`
-- 測試提示:用 `tempfile` 驗證 PNG 有產生且大小 > 0;`plot.py` 開頭加 `matplotlib.use("Agg")` 才能在無視窗環境(含 CI)跑
+- 測試需驗證 PNG 確實產生且非空檔;環境限制:`plot.py` 開頭加 `matplotlib.use("Agg")` 才能在無視窗環境跑
 - 在你的 `README.md` 貼圖並用 2–3 句解讀:誰最快?O(n²) 和 O(n log n) 的線斜率差在哪?加速比多少?
 
 ---

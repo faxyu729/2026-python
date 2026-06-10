@@ -20,15 +20,12 @@ import unittest
 
 class TestTimeit(unittest.TestCase):
     def test_returns_original_result(self):
-        # 提示:裝飾一個簡單函式(例如回傳 a + b),驗證回傳值不變
         self.fail("尚未實作 — 自己打提示詞跟 AI 討論後補上")
 
     def test_preserves_function_metadata(self):
-        # 提示:驗證 __name__ 不是 'wrapper'
         self.fail("尚未實作")
 
     def test_records_elapsed_time(self):
-        # 提示:呼叫兩次,驗證 last_elapsed > 0 且 records 長度為 2
         self.fail("尚未實作")
 
 
