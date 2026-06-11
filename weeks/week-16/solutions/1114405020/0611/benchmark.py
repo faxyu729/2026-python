@@ -6,6 +6,8 @@ from sorts_fast import bubble_sort_fast, quick_sort_fast
 
 
 def make_data(n: int, seed: int = 42) -> list:
+    if n <= 0:
+        raise ValueError(f"n must be positive, got {n}")
     random.seed(seed)
     return [random.randint(0, 10000) for _ in range(n)]
 
